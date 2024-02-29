@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="mt-40 space-y-3 cursor-pointer">
+      <div className="mt-36 space-y-3 cursor-pointer">
         <p className="text-xl text-muted-foreground text-slate-400">
           Technologies used to build this model
         </p>
