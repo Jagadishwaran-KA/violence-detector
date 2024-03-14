@@ -1,9 +1,8 @@
 import React from "react";
 import ReactPlayer from "react-player";
-
-function VideoPlayer() {
+function VideoPlayer({ filePath }) {
   return (
-    <div className="w-screen h-screen overflow-hidden">
+    <div className="overflow-hidden">
       <div className="flex">
         <div className="">
           <div className="flex justify-center items-center flex-col p-6 cursor-pointer">
@@ -32,18 +31,12 @@ function VideoPlayer() {
                 />
               </svg>
             </div>
-            {/* <h2>Video Builded</h2> */}
             <div className="mt-10">
               <ReactPlayer
-                url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                url={filePath}
                 controls={true}
                 width={800}
-                light={
-                  <img
-                    src="https://images.unsplash.com/photo-1654587703968-7b8bf8b1c747?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Video Loading"
-                  />
-                }
+                height={400}
               />
             </div>
           </div>
@@ -58,8 +51,9 @@ function VideoPlayer() {
           />
         </div>
       </div>
-      <div className="flex justify-evenly mt-5 p-2 bg-[#09090B] border-t-2 border-slate-500">
+      <div className="flex justify-evenly mt-3 p-2  border-t-2 border-slate-500">
         <div className="flex space-x-2">
+          {/* Semver Versioning */}
           <h1 className="mt-2">
             Build and compiled by Babel - ESLINT Version -- 7.0.2
           </h1>
